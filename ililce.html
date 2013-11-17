@@ -9,8 +9,8 @@
 
     <select id="il">
         <option>İl seçiniz..</option>
-        <option>İstanbul</option>
-        <option>Ankara</option>
+        <option value="34">İstanbul</option>
+        <option value="06">Ankara</option>
     </select>
 
     <select id="ilce">    
@@ -20,7 +20,14 @@
 <script>
     $(document).ready(function(){
         $('#il').change(function(){
-           
+            $.ajax({
+                url: "ilceler.php",
+                method: 'POST',
+                data: 'ilKodu='+$('#il').val()
+            })
+            .done(function( ilceoptionlari ) {
+                $('#ilce').html( ilceoptionlari );
+            });
         });
     });
 </script>

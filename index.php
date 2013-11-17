@@ -19,14 +19,13 @@ $(document).ready(function(){
     
     $('#btnAracGetir').click(function(){
        
-       $.ajax({
+        $.ajax({
             url: "arac.php",
-            })
-            .done(function( aracisimleri ) {
-                alert('sonuc geldi');
-                $('#liste').text( aracisimleri );
-            });
-       
+        })
+        .done(function( aracisimleri ) {
+            alert('sonuc geldi');
+            $('#liste').text( aracisimleri );
+        });
     });
     
 });
