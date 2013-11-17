@@ -12,12 +12,21 @@
 <div id="liste">
 
 </div>
+
 <script src="js/jquery-1.10.2.js"></script>
 <script>
 $(document).ready(function(){
     
     $('#btnAracGetir').click(function(){
-       alert('Beni tıkladın!'); 
+       
+       $.ajax({
+            url: "arac.php",
+            })
+            .done(function( aracisimleri ) {
+                alert('sonuc geldi');
+                $('#liste').text( aracisimleri );
+            });
+       
     });
     
 });
