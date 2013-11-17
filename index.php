@@ -6,15 +6,21 @@
     <meta name="viewport" content="width=device-width">
 </head>
 <body>
-<div>
-    
-    
-    
-    
+
+<input type="button" value="Araçları Listele" name="btnAracGetir" id="btnAracGetir" />
+
+<div id="liste">
+
 </div>
 <script src="js/jquery-1.10.2.js"></script>
 <script>
-
+$(document).ready(function(){
+    
+    $('#btnAracGetir').click(function(){
+       alert('Beni tıkladın!'); 
+    });
+    
+});
 </script>
 </body>
 </html>
